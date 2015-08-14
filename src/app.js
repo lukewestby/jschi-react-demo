@@ -1,7 +1,6 @@
 import React from 'react';
 import normalize from './styles/normalize.css';
 import fonts from './styles/fonts.css';
-import domready from 'domready';
 import renderStyles from './utilities/renderStyles';
 
 import { createStore, applyMiddleware, combineReducers, compose } from 'redux';

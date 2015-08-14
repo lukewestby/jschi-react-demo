@@ -27,8 +27,7 @@ module.exports = {
       'moment',
       'react-redux',
       'redux-devtools',
-      'redux-thunk',
-      'domready'
+      'redux-thunk'
     ]
   },
 
