@@ -36,5 +36,6 @@ npm install -g babel webpack webpack-dev-server
 - [ ] Remove global module deps
 - [ ] Use style-loader to properly load normalize and fonts
 - [ ] Incorporate Immutable?
+- [ ] Server rendering?
 - [ ] Make a couple slides
 - [ ] Write one or more unit tests for actions, reducers, and components
