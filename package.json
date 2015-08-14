@@ -1,6 +1,5 @@
 {
   "name": "jschi-react-demo",
-<<<<<<< HEAD
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -42,14 +41,4 @@
     "webpack": "1.10.1",
     "webpack-dev-server": "1.10.1"
   }
-=======
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "MIT"
->>>>>>> 802c9a72f10eae227c7c420bbe2ddef3ac846fef
 }
