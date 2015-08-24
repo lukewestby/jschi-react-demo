@@ -15,7 +15,7 @@ npm install -g babel webpack webpack-dev-server
   ```
   npm install
   ```
-1. Copy `api/config.js.example` to `config.js` and add your Meetup.com API key
+1. Copy `api/config.js.example` to `config.js` and add your Meetup.com API key. You can find your API key at https://secure.meetup.com/meetup_api/key/
 
   ```
   cp ./api/config.js.example ./api/config.js
