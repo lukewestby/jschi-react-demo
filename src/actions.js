@@ -4,14 +4,23 @@ import {
   LOAD_COMMENTS_FAILURE,
   CREATE_COMMENT_START,
   CREATE_COMMENT_SUCCESS,
-  CREATE_COMMENT_FAILURE
-} from '../constants';
+  CREATE_COMMENT_FAILURE,
+  UPDATE_COMMENT_TEXT,
+  CLEAR_COMMENT_TEXT
+} from './constants';
 
 import {
   createComment as apiCreateComment,
   getComments
-} from '../apis/meetupApi';
+} from './apis/meetupApi';
 
+export function updateCommentText(commentText) {
+  return { type: UPDATE_COMMENT_TEXT, commentText };
+}
+
+export function clearCommentText() {
+  return { type: CLEAR_COMMENT_TEXT };
+}
 
 export function loadCommentsStart() {
   return { type: LOAD_COMMENTS_START };
@@ -26,7 +35,7 @@ export function loadCommentsFailure(error) {
 }
 
 export function loadComments() {
-  return async function loadComments(dispatch) {
+  return async function (dispatch) {
     dispatch(loadCommentsStart());
     try {
       const comments = await getComments();
