@@ -7,7 +7,7 @@ import {
   CREATE_COMMENT_FAILURE,
   UPDATE_COMMENT_TEXT,
   CLEAR_COMMENT_TEXT
-} from './constants';
+} from '../constants';
 
 import {
   createComment as apiCreateComment,
