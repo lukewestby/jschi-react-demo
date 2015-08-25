@@ -31,4 +31,4 @@ Talk slides: http://slides.com/lukewestby/jschi-react-demo
 - ~~Incorporate Immutable?~~
 - ~~Server rendering?~~
 - [x] Make a couple slides
-- [ ] Write one or more unit tests for actions, reducers, and components
+- [x] Write one or more unit tests for ~~actions, reducers, and~~ components

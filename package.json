@@ -7,7 +7,7 @@
     "build": "./node_modules/webpack/bin/webpack.js --progress --profile --colors",
     "watch": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --progress --colors",
     "api": "./node_modules/babel/bin/babel-node.js --stage 0 ./api",
-    "test": "echo \"No unit tests and e2e tests yet\" && exit 1"
+    "test": "./node_modules/babel/bin/babel-node.js --stage 0 ./node_modules/tape/bin/tape ./test/**/*.test.js"
   },
   "license": "MIT",
   "dependencies": {
@@ -28,13 +28,19 @@
     "babel-core": "5.6.18",
     "babel-loader": "5.3.1",
     "css-loader": "0.16.0",
+    "css-modules-require-hook": "^1.0.3",
     "html-webpack-plugin": "1.6.0",
+    "jsdom": "^6.2.0",
     "json-loader": "0.5.2",
     "postcss": "4.1.16",
+    "postcss-modules-extract-imports": "0.0.5",
+    "postcss-modules-local-by-default": "0.0.12",
+    "postcss-modules-scope": "0.0.8",
     "react-hot-loader": "1.2.8",
     "redux-devtools": "1.0.2",
     "redux-thunk": "0.1.0",
     "style-loader": "0.12.3",
+    "tape": "^4.2.0",
     "webpack": "1.10.1",
     "webpack-dev-server": "1.10.1"
   }

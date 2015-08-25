@@ -36,8 +36,8 @@ export default class Comment extends Component {
       });
   }
 
-  parseCommentLinks(comment) {
-    return comment.replace(/https?:\/\/[^\s]+/g, (match) => {
+  getParsedComment(comment) {
+    return this.props.comment.comment.replace(/https?:\/\/[^\s]+/g, (match) => {
       return `<a href="${match}" target="_blank">${match}</a>`;
     });
   }
@@ -53,7 +53,7 @@ export default class Comment extends Component {
               {this.props.comment.member_name}
             </p>
             <p className={styles.content}
-               dangerouslySetInnerHTML={{__html: this.parseCommentLinks(this.props.comment.comment)}}>
+               dangerouslySetInnerHTML={{__html: this.getParsedComment()}}>
             </p>
             <p className={styles.metaData}>
               {this.getTimeAgo()} &middot; {this.getLikesText()}
