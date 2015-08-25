@@ -1,0 +1,25 @@
+.button {
+  composes: mintBackground from './Colors.css';
+  border: none;
+  outline: 0;
+  color: #fff;
+  border-radius: 3px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.button:active {
+  opacity: 0.6;
+}
+
+.button:disabled {
+  background-color: #acacac;
+}
+
+.button:disabled {
+  opacity: 1;
+}

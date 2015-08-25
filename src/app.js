@@ -1,8 +1,4 @@
 import React from 'react';
-import normalize from './styles/normalize.css';
-import fonts from './styles/fonts.css';
-import renderStyles from './utilities/renderStyles';
-
 import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
 import { Provider } from 'react-redux';
 import { devTools, persistState } from 'redux-devtools';
@@ -13,16 +9,6 @@ import appReducer from './reducers';
 import App from './components/App';
 
 const __DEBUG__ = false;
-
-function injectStyles(styleText) {
-  const sheet = document.createElement('style');
-  sheet.textContent = styleText;
-  document.head.appendChild(sheet);
-}
-
-injectStyles(normalize[0][1]);
-injectStyles(fonts[0][1]);
-renderStyles();
 
 const finalCreateStore = compose(
   applyMiddleware(thunk),

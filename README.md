@@ -1,13 +1,6 @@
 # JS.Chi React Demo
 
-## Required global modules
-- `babel` (for `babel-node`)
-- `webpack`
-- `webpack-dev-server`
-
-```
-npm install -g babel webpack webpack-dev-server
-```
+Talk slides: http://slides.com/lukewestby/jschi-react-demo
 
 ## Setup
 1. Install stuff
@@ -33,9 +26,9 @@ npm install -g babel webpack webpack-dev-server
 1. Open `localhost:8080`
 
 ## Todos
-- [ ] Remove global module deps
-- [ ] Use style-loader to properly load normalize and fonts
-- [ ] Incorporate Immutable?
-- [ ] Server rendering?
-- [ ] Make a couple slides
+- [x] Remove global module deps
+- [x] Use style-loader to properly load normalize and fonts
+- ~~Incorporate Immutable?~~
+- ~~Server rendering?~~
+- [x] Make a couple slides
 - [ ] Write one or more unit tests for actions, reducers, and components

@@ -1,0 +1,13 @@
+@import "./fonts.css";
+@import "./normalize.css";
+
+.appBase {
+  font-family: "Oxygen";
+  font-weight: normal;
+}
+
+.container {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 80px 20px 20px;
+}

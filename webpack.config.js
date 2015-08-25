@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
 var srcPath = path.join(__dirname, 'src');
 
@@ -20,9 +21,6 @@ module.exports = {
       'react-router',
       'redux',
       'superagent',
-      'stilr',
-      'postcss',
-      'autoprefixer-core',
       'immutable',
       'moment',
       'react-redux',
@@ -58,7 +56,7 @@ module.exports = {
       },
       {
         test: /\.css?$/,
-        loader: 'css'
+        loaders: ['style-loader', 'css-loader?modules&localIdentName=[local]__[hash:base64]', 'autoprefixer-loader']
       }
     ]
   },
@@ -74,7 +72,7 @@ module.exports = {
 
   debug: true,
 
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
 
   devServer: {
     contentBase: './tmp',

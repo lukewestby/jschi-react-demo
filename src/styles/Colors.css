@@ -1,0 +1,15 @@
+.mintText {
+  color: #4fc094;
+}
+
+.mintBorder {
+  border-color: #4fc094;
+}
+
+.mintBorderFocus:focus {
+  border-color: #4fc094;
+}
+
+.mintBackground {
+  background-color: #4fc094;
+}

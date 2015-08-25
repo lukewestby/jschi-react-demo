@@ -1,49 +1,7 @@
 import moment from 'moment';
 import React, { Component } from 'react';
-import StyleSheet from 'stilr';
 
-import CommentsList from './CommentsList';
-
-const styles = StyleSheet.create({
-  detailsContainer: {
-    display: 'flex',
-    alignItems: 'flex-start',
-    paddingBottom: '16px',
-    ':last-child': {
-      paddingBottom: '0px'
-    }
-  },
-  mainContainer: {
-    marginBottom: '32px',
-    ':last-child': {
-      marginBottom: '0'
-    }
-  },
-  repliesContainer: {
-    padding: '16px',
-    backgroundColor: '#f7f7f7'
-  },
-  image: {
-    width: '100px',
-  },
-  info: {
-    paddingLeft: '16px'
-  },
-  content: {
-    margin: 0,
-    lineHeight: 1.4
-  },
-  metaData: {
-    margin: 0,
-    color: '#acacac'
-  },
-  name: {
-    margin: 0,
-    marginBottom: '12px',
-    fontSize: '1.2em',
-    lineHeight: '1'
-  }
-});
+import styles from '../styles/Comment.css';
 
 export default class Comment extends Component {
 
@@ -78,6 +36,12 @@ export default class Comment extends Component {
       });
   }
 
+  parseCommentLinks(comment) {
+    return comment.replace(/https?:\/\/[^\s]+/g, (match) => {
+      return `<a href="${match}" target="_blank">${match}</a>`;
+    });
+  }
+
   render() {
     return (
       <div className={styles.mainContainer}>
@@ -88,8 +52,8 @@ export default class Comment extends Component {
             <p className={styles.name}>
               {this.props.comment.member_name}
             </p>
-            <p className={styles.content}>
-              {this.props.comment.comment}
+            <p className={styles.content}
+               dangerouslySetInnerHTML={{__html: this.parseCommentLinks(this.props.comment.comment)}}>
             </p>
             <p className={styles.metaData}>
               {this.getTimeAgo()} &middot; {this.getLikesText()}

@@ -1,0 +1,28 @@
+.commentBox {
+  composes: mintBorderFocus from './Colors.css';
+  resize: none;
+  outline: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin: 0;
+  border-radius: 3px;
+  border: 1px solid #a7a7a7;
+  box-sizing: border-box;
+}
+
+.buttonContainer {
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.message {
+  composes: mintText from './Colors.css';
+  font-size: 1.3em;
+}
+
+.submitButton {
+  composes: button from './Buttons.css';
+}

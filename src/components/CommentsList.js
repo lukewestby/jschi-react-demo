@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-import StyleSheet from 'stilr';
+
 import CommentBox from './CommentBox';
 import Comment from './Comment';
 
-const styles = StyleSheet.create({
-  commentsContainer: {
-    marginTop: '16px'
-  }
-});
+import styles from '../styles/CommentsList.css';
 
 export default class CommentsList extends Component {
 
