@@ -1,6 +1,5 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
 var srcPath = path.join(__dirname, 'src');
 
@@ -38,9 +37,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'tmp'),
     publicPath: '',
-    filename: '[name].js',
-    library: ['Example', '[name]'],
-    pathInfo: true
+    filename: '[name].js'
   },
 
   module: {
