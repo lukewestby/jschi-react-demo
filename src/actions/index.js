@@ -12,7 +12,7 @@ import {
 import {
   createComment as apiCreateComment,
   getComments
-} from './apis/meetupApi';
+} from '../apis/meetupApi';
 
 export function updateCommentText(commentText) {
   return { type: UPDATE_COMMENT_TEXT, commentText };
