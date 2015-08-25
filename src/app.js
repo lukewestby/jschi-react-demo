@@ -8,14 +8,19 @@ import thunk from 'redux-thunk';
 import appReducer from './reducers';
 import App from './components/App';
 
-const __DEBUG__ = false;
+const DEBUG = false;
 
-const finalCreateStore = compose(
-  applyMiddleware(thunk),
-  devTools(),
-  persistState(window.location.href.match(/[?&]debug_session=([^&]+)\b/)),
-  createStore
-);
+const finalCreateStore = DEBUG ?
+  compose(
+    applyMiddleware(thunk),
+    devTools(),
+    persistState(window.location.href.match(/[?&]debug_session=([^&]+)\b/)),
+    createStore
+  ) :
+  compose(
+    applyMiddleware(thunk),
+    createStore
+  );
 
 const store = finalCreateStore(appReducer);
 
@@ -30,7 +35,7 @@ React.render(
 );
 
 function renderDebugPanel() {
-  if(!__DEBUG__) return;
+  if(!DEBUG) return;
   return (
     <DebugPanel top right bottom>
       <DevTools store={store}

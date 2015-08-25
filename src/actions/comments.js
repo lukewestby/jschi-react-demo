@@ -1,11 +1,17 @@
 import {
+  LOAD_COMMENTS_START,
+  LOAD_COMMENTS_SUCCESS,
+  LOAD_COMMENTS_FAILURE,
+  CREATE_COMMENT_START,
+  CREATE_COMMENT_SUCCESS,
+  CREATE_COMMENT_FAILURE
+} from '../constants';
+
+import {
   createComment as apiCreateComment,
   getComments
-} from './apis/MeetupApi';
+} from '../apis/MeetupApi';
 
-export const LOAD_COMMENTS_START = 'LOAD_COMMENTS_START';
-export const LOAD_COMMENTS_SUCCESS = 'LOAD_COMMENTS_SUCCESS';
-export const LOAD_COMMENTS_FAILURE = 'LOAD_COMMENTS_FAILURE';
 
 export function loadCommentsStart() {
   return { type: LOAD_COMMENTS_START };
@@ -31,21 +37,6 @@ export function loadComments() {
     }
   }
 }
-
-export const UPDATE_COMMENT_TEXT = 'UPDATE_COMMENT_TEXT';
-export const CLEAR_COMMENT_TEXT = 'CLEAR_COMMENT_TEXT';
-
-export function updateCommentText(commentText) {
-  return { type: UPDATE_COMMENT_TEXT, commentText };
-}
-
-export function clearCommentText() {
-  return { type: CLEAR_COMMENT_TEXT };
-}
-
-export const CREATE_COMMENT_START = 'CREATE_COMMENT_START';
-export const CREATE_COMMENT_SUCCESS = 'CREATE_COMMENT_SUCCESS';
-export const CREATE_COMMENT_FAILURE = 'CREATE_COMMENT_FAILURE';
 
 export function createCommentStart() {
   return { type: CREATE_COMMENT_START };

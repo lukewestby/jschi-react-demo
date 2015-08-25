@@ -1,9 +1,8 @@
-import request from '../utilities/request';
+import request from './request';
 
 const BASE_URL = 'http://localhost:8090';
 const EVENT_COMMENTS_URL = `${BASE_URL}/event_comments`;
 const EVENT_COMMENT_URL = `${BASE_URL}/event_comment`;
-
 const EVENT_ID = 224092498;
 
 export async function getComments() {
