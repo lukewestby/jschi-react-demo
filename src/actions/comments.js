@@ -10,7 +10,7 @@ import {
 import {
   createComment as apiCreateComment,
   getComments
-} from '../apis/MeetupApi';
+} from '../apis/meetupApi';
 
 
 export function loadCommentsStart() {
